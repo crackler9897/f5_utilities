@@ -103,7 +103,7 @@ orphaned_object_search()
 	else
 		inventory=$(find /config -regextype posix-extended -regex '(^.*config/bigip.conf$)|(^.*partitions/.*/bigip.conf$)' -exec grep 'ltm profile '"$object"'\|ltm '"$object"'' {} \; | awk '{print $3, $4}')
 		### example:  cookie /Common/cookie_test
-    ### example:  client-ssl /Common/clientssl_test.rjf.com
+                ### example:  client-ssl /Common/clientssl_test
 		### example:  ldap /partition_3/monitor_test.company.com_90234
 					
 	  workflow $object
